@@ -1,0 +1,278 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 9,
+    "passes": 4,
+    "pending": 0,
+    "failures": 5,
+    "start": "2023-10-29T05:08:47.940Z",
+    "end": "2023-10-29T05:10:48.336Z",
+    "duration": 120396,
+    "testsRegistered": 9,
+    "passPercent": 44.44444444444444,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "adde518c-f80c-4ec9-8174-2e3db7982e2e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\AlertsTest.spec.js",
+      "file": "cypress\\e2e\\AlertsTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+          "title": "Verify Alerts Module",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify System Admin Login",
+              "fullTitle": "Verify Alerts Module Verify System Admin Login",
+              "timedOut": null,
+              "duration": 34321,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\AlertsTest.spec.js\\\\Verify Alerts Module -- Verify System Admin Login (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "const lp = new _LoginPage.default();\nlp.navigateLogin();\nlp.setUsername('Sysadm.uat@gmail.com');\nlp.setPassword('Uat@@123');\nlp.clickSubmit();\nlp.verifyValidLogin();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers' to equal 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers' to equal 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'\n    at Login.verifyValidLogin (webpack://cypress/./cypress/pages/LoginPage.js:34:15)\n    at Context.eval (webpack://cypress/./cypress/e2e/AlertsTest.spec.js:14:11)",
+                "diff": "- 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers'\n+ 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'\n"
+              },
+              "uuid": "f7182aed-7719-41f2-8d5c-74a2fee29ab8",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Alerts Page",
+              "fullTitle": "Verify Alerts Module Verify Alerts Page",
+              "timedOut": null,
+              "duration": 4641,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n}",
+              "code": "ap.clickOnAlertNavigationMenuButton();\nap.verifyAlertPage();",
+              "err": {},
+              "uuid": "a6294055-6ec8-4efe-9d60-e670d299b85e",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Add Alert Window",
+              "fullTitle": "Verify Alerts Module Verify Add Alert Window",
+              "timedOut": null,
+              "duration": 4719,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n}",
+              "code": "ap.clickOnAddAlertButton();\nap.verifyAddAlertWindowTitle();",
+              "err": {},
+              "uuid": "a387bab8-c259-4ac5-9c80-03a151c2e1e3",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Add Alert Window Blank Validation Message",
+              "fullTitle": "Verify Alerts Module Verify Add Alert Window Blank Validation Message",
+              "timedOut": null,
+              "duration": 14606,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n}",
+              "code": "ap.clickOnAddAlertWindowSave();\nap.verifyAddAlertWindowTypeBlank();\nap.verifyAddAlertWindowTitleBlank();\nap.verifyAddAlertWindowSubtitleBlank();\nap.verifyAddAlertWindowDescriptionBlank();\nap.verifyAddAlertWindowDisplayTextBlank();\nap.verifyAddAlertWindowLinkBlank();",
+              "err": {},
+              "uuid": "d5d29763-922c-4503-96f3-aeafedef74f3",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Add Alert Added Successfully",
+              "fullTitle": "Verify Alerts Module Verify Add Alert Added Successfully",
+              "timedOut": null,
+              "duration": 41808,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n}",
+              "code": "ap.setAddAlertType();\nvar text = ap.randomStringUpperCaseGenerator(5);\nap.setAddAlertTitle(text + ' ' + text);\nap.setAddAlertSubtitle(text + text + ' ' + text + text);\nap.setAddAlertDescription(text + text + text + ' ' + text + text + text + ' ' + text + text + text);\nap.setAddAlertButton('link');\nap.setAddAlertDisplayText(text + text + text);\nap.setAddAlertLink('www.' + text + '.com');\nap.clickOnAddAlertFromDate();\nap.clickOnAddAlertDateSave();\nap.clickOnAddAlertToDate();\nap.clickOnAddAlertDateSave();\nap.clickOnAddAlertWindowSave();\nap.verifyAddAlertAddedSucessfully();\nap.setAddAlertSearchBox(text + ' ' + text);\nap.verifyAddAlertRowCount();",
+              "err": {},
+              "uuid": "113c918f-d514-4d1b-ae9d-a8de74c39d26",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Add Alert Edit Functionality",
+              "fullTitle": "Verify Alerts Module Verify Add Alert Edit Functionality",
+              "timedOut": null,
+              "duration": 6486,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\AlertsTest.spec.js\\\\Verify Alerts Module -- Verify Add Alert Edit Functionality (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "ap.clickOnAddAlertKebabMenu();\nap.clickOnAddAlertKebabEdit();\nvar text = ap.randomStringUpperCaseGenerator(5);\nap.setAddAlertTitle(text + ' ' + text);\nap.setAddAlertSubtitle(text + text + ' ' + text + text);\nap.setAddAlertDescription(text + text + text + ' ' + text + text + text + ' ' + text + text + text);\nap.setAddAlertButton('link');\nap.setAddAlertDisplayText(text + text + text);\nap.setAddAlertLink('www.' + text + '.com');\nap.clickOnAddAlertFromDate();\nap.clickOnAddAlertDateSave();\nap.clickOnAddAlertToDate();\nap.clickOnAddAlertDateSave();\nap.clickOnAddAlertWindowSave();\nap.verifyAddAlertUpdatedSucessfully();\nap.setAddAlertSearchBox(text + ' ' + text);\nap.verifyAddAlertRowCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Edit']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Edit']`, but never found it.\n    at Alerts.clickOnAddAlertKebabEdit (webpack://cypress/./cypress/pages/AlertsPage.js:78:11)\n    at Context.eval (webpack://cypress/./cypress/e2e/AlertsTest.spec.js:58:11)",
+                "diff": null
+              },
+              "uuid": "94b00aee-24c9-4cbe-bc17-fb67340a7caa",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Add Alert Stop Functionality",
+              "fullTitle": "Verify Alerts Module Verify Add Alert Stop Functionality",
+              "timedOut": null,
+              "duration": 4434,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\AlertsTest.spec.js\\\\Verify Alerts Module -- Verify Add Alert Stop Functionality (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "ap.clickOnAddAlertKebabMenu();\nap.clickOnAddAlertKebabStop();\nap.verifyAddAlertDialogWindowStopText();\nap.clickOnAddAlertWindowDialogStop();\nap.verifyAddAlertStoppedSucessfully();\nap.verifyAddAlertStoppedStatus();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<span class=\"c-pointer\">...</span>`\n\nis being covered by another element:\n\n`<div aria-hidden=\"true\" style=\"z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<span class=\"c-pointer\">...</span>`\n\nis being covered by another element:\n\n`<div aria-hidden=\"true\" style=\"z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111849:68)\n    at ensureDescendents (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111900:5)\n    at ensureDescendentsAndScroll (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111906:14)\n    at ensureElIsNotCovered (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112037:5)\n    at runAllChecks (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112217:52)\n    at retryActionability (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112254:16)\n    at tryCatcher (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:143192:68)\n    at <unknown> (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:143133:14)\n    at tryCatcher (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Alerts.clickOnAddAlertKebabMenu (webpack://cypress/./cypress/pages/AlertsPage.js:73:44)\n    at Context.eval (webpack://cypress/./cypress/e2e/AlertsTest.spec.js:77:11)",
+                "diff": null
+              },
+              "uuid": "22364dc2-171b-4a59-86c3-6ba0ba3afd08",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Add Alert Resume Functionality",
+              "fullTitle": "Verify Alerts Module Verify Add Alert Resume Functionality",
+              "timedOut": null,
+              "duration": 4482,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\AlertsTest.spec.js\\\\Verify Alerts Module -- Verify Add Alert Resume Functionality (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "ap.clickOnAddAlertKebabMenu();\nap.clickOnAddAlertKebabResume();\nap.verifyAddAlertDialogWindowResumeText();\nap.clickOnAddAlertWindowDialogResume();\nap.verifyAddAlertResumedSucessfully();\nap.verifyAddAlertResumedStatus();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<span class=\"c-pointer\">...</span>`\n\nis being covered by another element:\n\n`<div aria-hidden=\"true\" style=\"z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<span class=\"c-pointer\">...</span>`\n\nis being covered by another element:\n\n`<div aria-hidden=\"true\" style=\"z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111849:68)\n    at ensureDescendents (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111900:5)\n    at ensureDescendentsAndScroll (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111906:14)\n    at ensureElIsNotCovered (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112037:5)\n    at runAllChecks (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112217:52)\n    at retryActionability (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112254:16)\n    at tryCatcher (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:143192:68)\n    at <unknown> (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:143133:14)\n    at tryCatcher (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Alerts.clickOnAddAlertKebabMenu (webpack://cypress/./cypress/pages/AlertsPage.js:73:44)\n    at Context.eval (webpack://cypress/./cypress/e2e/AlertsTest.spec.js:86:11)",
+                "diff": null
+              },
+              "uuid": "77cc9ec3-74f0-4f6a-96d7-b073f26ad174",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Add Alert Delete Functionality",
+              "fullTitle": "Verify Alerts Module Verify Add Alert Delete Functionality",
+              "timedOut": null,
+              "duration": 4429,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\AlertsTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\AlertsTest.spec.js\\\\Verify Alerts Module -- Verify Add Alert Delete Functionality (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "ap.clickOnAddAlertKebabMenu();\nap.clickOnAddAlertKebabDelete();\nap.verifyAddAlertDialogWindowDeleteText();\nap.clickOnAddAlertWindowDialogDelete();\nap.verifyAddAlertDeletedSucessfully();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<span class=\"c-pointer\">...</span>`\n\nis being covered by another element:\n\n`<div aria-hidden=\"true\" style=\"z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<span class=\"c-pointer\">...</span>`\n\nis being covered by another element:\n\n`<div aria-hidden=\"true\" style=\"z-index: -1; position: fixed; inset: 0px; background-color: transparent; -webkit-tap-highlight-color: transparent;\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111849:68)\n    at ensureDescendents (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111900:5)\n    at ensureDescendentsAndScroll (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:111906:14)\n    at ensureElIsNotCovered (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112037:5)\n    at runAllChecks (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112217:52)\n    at retryActionability (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:112254:16)\n    at tryCatcher (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:143192:68)\n    at <unknown> (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:143133:14)\n    at tryCatcher (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://uat-falkonsms-fe.azurewebsites.net/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Alerts.clickOnAddAlertKebabMenu (webpack://cypress/./cypress/pages/AlertsPage.js:73:44)\n    at Context.eval (webpack://cypress/./cypress/e2e/AlertsTest.spec.js:95:11)",
+                "diff": null
+              },
+              "uuid": "b73bb7e0-0249-4da0-9ffa-82eab0c1789d",
+              "parentUUID": "d6788760-f192-4dac-b0a5-09c430a9d1e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a6294055-6ec8-4efe-9d60-e670d299b85e",
+            "a387bab8-c259-4ac5-9c80-03a151c2e1e3",
+            "d5d29763-922c-4503-96f3-aeafedef74f3",
+            "113c918f-d514-4d1b-ae9d-a8de74c39d26"
+          ],
+          "failures": [
+            "f7182aed-7719-41f2-8d5c-74a2fee29ab8",
+            "94b00aee-24c9-4cbe-bc17-fb67340a7caa",
+            "22364dc2-171b-4a59-86c3-6ba0ba3afd08",
+            "77cc9ec3-74f0-4f6a-96d7-b073f26ad174",
+            "b73bb7e0-0249-4da0-9ffa-82eab0c1789d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 119926,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-29T04:41:33.459Z",
+    "end": "2023-10-29T04:42:45.075Z",
+    "duration": 71616,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b0522afb-6098-4d4f-a175-84c60a33cca6",
+      "title": "",
+      "fullFile": "cypress\\e2e\\LoginTest.spec.js",
+      "file": "cypress\\e2e\\LoginTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "167c643f-a2a0-41f7-96ac-d2c869b2da38",
+          "title": "Test1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "LoginTest",
+              "fullTitle": "Test1 LoginTest",
+              "timedOut": null,
+              "duration": 48706,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('Credentails').its('data').then(user => {\n  user.forEach(user => {\n    const ln = new _LoginPage.default();\n    ln.navigateLogin();\n    ln.setUsername(user.username);\n    ln.setPassword(user.password);\n    ln.clickSubmit();\n    ln.verifyValidLogin();\n  });\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers' to equal 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers' to equal 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'\n    at Login.verifyValidLogin (webpack://cypress/./cypress/pages/LoginPage.js:34:15)\n    at eval (webpack://cypress/./cypress/e2e/LoginTest.spec.js:15:15)\n    at Context.eval (webpack://cypress/./cypress/e2e/LoginTest.spec.js:9:17)",
+                "diff": "- 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers'\n+ 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'\n"
+              },
+              "uuid": "fab19ba4-d527-4fe3-8fb6-43c911a31408",
+              "parentUUID": "167c643f-a2a0-41f7-96ac-d2c869b2da38",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login",
+              "fullTitle": "Test1 Login",
+              "timedOut": null,
+              "duration": 22743,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('Credentails').then(user => {\n  const ln = new _LoginPage.default();\n  ln.navigateLogin();\n  ln.setUsername(user.username);\n  ln.setPassword(user.password);\n  ln.clickSubmit();\n  ln.verifyValidLogin();\n});",
+              "err": {},
+              "uuid": "65b90c03-1985-4079-9375-eae137c4f524",
+              "parentUUID": "167c643f-a2a0-41f7-96ac-d2c869b2da38",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "65b90c03-1985-4079-9375-eae137c4f524"
+          ],
+          "failures": [
+            "fab19ba4-d527-4fe3-8fb6-43c911a31408"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 71449,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

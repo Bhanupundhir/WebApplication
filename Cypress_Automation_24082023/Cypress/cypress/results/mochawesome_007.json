@@ -1,0 +1,500 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 18,
+    "passes": 0,
+    "pending": 0,
+    "failures": 18,
+    "start": "2023-10-29T04:59:53.221Z",
+    "end": "2023-10-29T05:02:24.689Z",
+    "duration": 151468,
+    "testsRegistered": 18,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1fed2e14-c98a-4a56-b7c2-ac2ca10c6eef",
+      "title": "",
+      "fullFile": "cypress\\e2e\\PlanTest.spec.js",
+      "file": "cypress\\e2e\\PlanTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+          "title": "Plans",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verifyAdminLogin",
+              "fullTitle": "Plans verifyAdminLogin",
+              "timedOut": null,
+              "duration": 25748,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAdminLogin (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "const lp = new _LoginPage.default();\nlp.navigateLogin();\nlp.setUsername(\"Sysadm.uat@gmail.com\");\nlp.setPassword(\"Uat@@123\");\nlp.clickSubmit();\nlp.verifyValidLogin();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers' to equal 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers' to equal 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'\n    at Login.verifyValidLogin (webpack://cypress/./cypress/pages/LoginPage.js:34:15)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:13:15)",
+                "diff": "- 'https://uat-falkonsms-fe.azurewebsites.net/phone-numbers'\n+ 'https://uat-falkonsms-fe.azurewebsites.net/dashboard'\n"
+              },
+              "uuid": "0a703311-2a53-4e1e-8d55-d8db2570212e",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyPlansPage",
+              "fullTitle": "Plans verifyPlansPage",
+              "timedOut": null,
+              "duration": 7377,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyPlansPage (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnPlans();\npp.verifyPlansPage();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//div[text()='Tiers']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//div[text()='Tiers']`, but never found it.\n    at Plan.clickOnPlans (webpack://cypress/./cypress/pages/PlanPage.js:59:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:17:11)",
+                "diff": null
+              },
+              "uuid": "3b8c7e15-4fce-4f26-aaa6-f24caf4fd269",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyTiersAddNewPlanWindow",
+              "fullTitle": "Plans verifyTiersAddNewPlanWindow",
+              "timedOut": null,
+              "duration": 7301,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyTiersAddNewPlanWindow (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\npp.verifyTiersAddNewPlanTitle();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:22:11)",
+                "diff": null
+              },
+              "uuid": "a20aeee5-7d7c-41e8-9760-607ec2536646",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWindowBlankFields",
+              "fullTitle": "Plans verifyAddNewPlanWindowBlankFields",
+              "timedOut": null,
+              "duration": 7301,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWindowBlankFields (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.setAddNewPlanSelectPlanTypeBlank();\npp.setAddNewPlanNameBlank();\npp.verifyAddNewPlanNameBlankMessage();\npp.verifyAddNewPlanSelectPlanTypeBlankMessage();\npp.clickOnAddNewPlanCancel();\npp.clickOnTiersAddNewPlan();\npp.setAddNewPlanSelectProductBlank();\npp.setAddNewPlanNameBlank();\npp.verifyAddNewPlanSelectProductBlankMessage();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name='PlanType']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name='PlanType']`, but never found it.\n    at Plan.setAddNewPlanSelectPlanTypeBlank (webpack://cypress/./cypress/pages/PlanPage.js:169:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:27:11)",
+                "diff": null
+              },
+              "uuid": "652e0129-a12d-4e06-a011-078897c36181",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWindowCharacterLimit",
+              "fullTitle": "Plans verifyAddNewPlanWindowCharacterLimit",
+              "timedOut": null,
+              "duration": 7247,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWindowCharacterLimit (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "var planname = pp.randomStringUpperCaseGenerator(31);\nvar footnote = pp.randomStringUpperCaseGenerator(31);\npp.setAddNewPlanName(planname);\npp.setAddNewPlanFootNote(footnote);\npp.verifyAddNewPlanNameCharacterLimit();\npp.verifyAddNewPlanFootNoteCharacterLimit();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name='Name']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name='Name']`, but never found it.\n    at Plan.setAddNewPlanName (webpack://cypress/./cypress/pages/PlanPage.js:174:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:41:11)",
+                "diff": null
+              },
+              "uuid": "d82157c8-0dae-40a1-bee8-d917411f028e",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWindowAllFieldsAreVisbleAsPerPlanSelection",
+              "fullTitle": "Plans verifyAddNewPlanWindowAllFieldsAreVisbleAsPerPlanSelection",
+              "timedOut": null,
+              "duration": 7281,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWindowAllFieldsAreVisbleAsPerPlanSelection (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.setAddNewPlanSelectPlanType('Plan');\npp.verifyAddNewPlanSelectCountryDropdown();\npp.verifyAddNewPlanMonthlyPrice();\npp.verifyAddNewPlanAnnualPrice();\npp.verifyAddNewPlanSelectFeatureType();\npp.verifyAddNewPlanSelectFeature();\npp.verifyAddNewPlanValue();\npp.setAddNewPlanSelectPlanType('Add-On');\npp.verifyAddNewPlanTierOccurrence();\npp.verifyAddNewPlanSelectCountryDropdown();\npp.verifyAddNewPlanPrice();\npp.verifyAddNewPlanSelectFeature();\npp.verifyAddNewPlanValue();\npp.verifyAddNewPlanAddPlanButtonIsDisabled();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name='PlanType']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@name='PlanType']`, but never found it.\n    at Plan.setAddNewPlanSelectPlanType (webpack://cypress/./cypress/pages/PlanPage.js:184:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:48:11)",
+                "diff": null
+              },
+              "uuid": "1029e274-89d3-4ee3-abc5-386f0fed74eb",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithBasicPlanFalseAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithBasicPlanFalseAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7428,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithBasicPlanFalseAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnAddNewPlanCancel();\npp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\nvar singleDigitValueLandline = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameLandline + ' ' + planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanAnnualPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\n// pp.setAddNewPlanSelectFeatureType('Main Feature');\n// pp.setAddNewPlanSelectFeature('10DLC Registration');\n// pp.clickOnAddNewPlanUnlimited();\n// pp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline + ' ' + planNameLandline);\npp.verifyAddNewPlanRowGridCount();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\nvar singleDigitValueVoip = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameVoip + ' ' + planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanAnnualPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip + ' ' + planNameVoip);\npp.verifyAddNewPlanRowGridCount();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams + ' ' + planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanAnnualPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams + ' ' + planNameTeams);\npp.verifyAddNewPlanRowGridCount();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll + ' ' + planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanAnnualPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll + ' ' + planNameToll);\npp.verifyAddNewPlanRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Cancel']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Cancel']`, but never found it.\n    at Plan.clickOnAddNewPlanCancel (webpack://cypress/./cypress/pages/PlanPage.js:69:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:65:11)",
+                "diff": null
+              },
+              "uuid": "19772189-9539-4e6b-a331-cdbec94178e6",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithBasicPlanTrueAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithBasicPlanTrueAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7414,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithBasicPlanTrueAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\nvar singleDigitValueLandline = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameLandline + ' ' + planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanAnnualPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline + ' ' + planNameLandline);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\nvar singleDigitValueVoip = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameVoip + ' ' + planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanAnnualPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip + ' ' + planNameVoip);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams + ' ' + planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanAnnualPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams + ' ' + planNameTeams);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll + ' ' + planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanAnnualPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twoDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll + ' ' + planNameToll);\npp.verifyAddNewPlanRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:302:11)",
+                "diff": null
+              },
+              "uuid": "150dd519-d3fd-4bf2-ad38-18c08d32b29b",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithStandardPlanFalseAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithStandardPlanFalseAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7419,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithStandardPlanFalseAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\nvar singleDigitValueLandline = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameLandline + ' ' + planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanAnnualPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline + ' ' + planNameLandline);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\nvar singleDigitValueVoip = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameVoip + ' ' + planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanAnnualPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip + ' ' + planNameVoip);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams + ' ' + planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanAnnualPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams + ' ' + planNameTeams);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll + ' ' + planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanAnnualPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll + ' ' + planNameToll);\npp.verifyAddNewPlanRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:541:11)",
+                "diff": null
+              },
+              "uuid": "94538a01-2166-4db0-9674-d27a402c91c6",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithStandardPlanTrueAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithStandardPlanTrueAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7593,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithStandardPlanTrueAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\nvar singleDigitValueLandline = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameLandline + ' ' + planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanAnnualPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueLandline);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline + ' ' + planNameLandline);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\nvar singleDigitValueVoip = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameVoip + ' ' + planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanAnnualPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueVoip);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip + ' ' + planNameVoip);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams + ' ' + planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanAnnualPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams + ' ' + planNameTeams);\npp.verifyAddNewPlanRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll + ' ' + planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanAnnualPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickOnAddNewPlanSubmit();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll + ' ' + planNameToll);\npp.verifyAddNewPlanRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:760:11)",
+                "diff": null
+              },
+              "uuid": "4e3d14a1-b8f5-4fe7-a763-db624de5be80",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithStandardAddonFalseOneTimeAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithStandardAddonFalseOneTimeAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7463,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithStandardAddonFalseOneTimeAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeature('Credits per month');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline01 = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline01);\npp.setAddNewPlanFootNote(footNoteLandline01);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline01 + '.' + twoDigitValueLandline01);\npp.setAddNewPlanSelectFeature('Keywords');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline01);\npp.verifyAddNewPlanAddonRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:983:11)",
+                "diff": null
+              },
+              "uuid": "6c406b4e-b593-49aa-9d9d-63745353b93a",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithStandardAddonFalseRecurringAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithStandardAddonFalseRecurringAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7350,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithStandardAddonFalseRecurringAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeature('Credits per month');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline01 = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline01);\npp.setAddNewPlanFootNote(footNoteLandline01);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('False');\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline01 + '.' + twoDigitValueLandline01);\npp.setAddNewPlanSelectFeature('Keywords');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline01);\npp.verifyAddNewPlanAddonRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:1088:11)",
+                "diff": null
+              },
+              "uuid": "a1cbe3cc-35aa-4193-9422-bff77b083664",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithStandardAddonTrueOneTimeAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithStandardAddonTrueOneTimeAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7370,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithStandardAddonTrueOneTimeAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeature('Credits per month');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline01 = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline01);\npp.setAddNewPlanFootNote(footNoteLandline01);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline01 + '.' + twoDigitValueLandline01);\npp.setAddNewPlanSelectFeature('Keywords');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline01);\npp.verifyAddNewPlanAddonRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:1193:11)",
+                "diff": null
+              },
+              "uuid": "21b9a1b3-e04b-4d69-a24b-4407eba1b6e3",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanWithStandardAddonTrueRecurringAddedSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanWithStandardAddonTrueRecurringAddedSuccessfully",
+              "timedOut": null,
+              "duration": 7372,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanWithStandardAddonTrueRecurringAddedSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnTiersAddNewPlan();\nvar planNameLandline = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline);\npp.setAddNewPlanFootNote(footNoteLandline);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline + '.' + twoDigitValueLandline);\npp.setAddNewPlanSelectFeature('Credits per month');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameVoip = pp.randomStringUpperCaseGenerator(5);\nvar footNoteVoip = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueVoip = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameVoip);\npp.setAddNewPlanFootNote(footNoteVoip);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('VoIP Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueVoip + '.' + twoDigitValueVoip);\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twoDigitValueVoip);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameVoip);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameTeams = pp.randomStringUpperCaseGenerator(5);\nvar footNoteTeams = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueTeams = pp.randomNumberGenerator(2);\nvar singleDigitValueTeams = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameTeams);\npp.setAddNewPlanFootNote(footNoteTeams);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('MS Teams Calling and Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueTeams + '.' + twoDigitValueTeams);\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singleDigitValueTeams);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameTeams);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameToll = pp.randomStringUpperCaseGenerator(5);\nvar footNoteToll = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueToll = pp.randomNumberGenerator(2);\nvar singleDigitValueToll = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planNameToll);\npp.setAddNewPlanFootNote(footNoteToll);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Toll-Free Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueToll + '.' + twoDigitValueToll);\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singleDigitValueToll);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameToll);\npp.verifyAddNewPlanAddonRowGridCount();\npp.clickOnTiersAddNewPlan();\nvar planNameLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar footNoteLandline01 = pp.randomStringUpperCaseGenerator(5);\nvar twoDigitValueLandline01 = pp.randomNumberGenerator(2);\npp.setAddNewPlanName(planNameLandline01);\npp.setAddNewPlanFootNote(footNoteLandline01);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanIsPrivate('True');\npp.setAddNewPlanSelectOrganization();\npp.setAddNewPlanSelectTierOccurrence('Recurring');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twoDigitValueLandline01 + '.' + twoDigitValueLandline01);\npp.setAddNewPlanSelectFeature('Keywords');\npp.clickOnAddNewPlanUnlimited();\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanAddedSuccessfully();\npp.setAddNewPlanSearchBox(planNameLandline01);\npp.verifyAddNewPlanAddonRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//span[text()='Add New Plan']`, but never found it.\n    at Plan.clickOnTiersAddNewPlan (webpack://cypress/./cypress/pages/PlanPage.js:64:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:1303:11)",
+                "diff": null
+              },
+              "uuid": "2b071dcd-4849-4e00-8653-71a0aa12abf4",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanUnhideSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanUnhideSuccessfully",
+              "timedOut": null,
+              "duration": 7310,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanUnhideSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnKebabMenu();\npp.clickOnKebabMenuUnhide();\npp.verifyAddNewPlanWindowUnhideText();\npp.clickOnUnhideWindowCancelButton();\npp.clickOnKebabMenu();\npp.clickOnKebabMenuUnhide();\npp.clickOnUnhideWindowUnhideButton();\npp.verifyAddNewPlanUnhideSuccessfullyText();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.\n    at Plan.clickOnKebabMenu (webpack://cypress/./cypress/pages/PlanPage.js:94:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:1413:11)",
+                "diff": null
+              },
+              "uuid": "9a13a811-5363-4efe-8b4d-a4d02f7f9621",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanHideSuccessfully",
+              "fullTitle": "Plans verifyAddNewPlanHideSuccessfully",
+              "timedOut": null,
+              "duration": 7312,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanHideSuccessfully (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnKebabMenu();\npp.clickOnKebabMenuHide();\npp.verifyAddNewPlanWindowHideText();\npp.clickOnhideWindowCancelButton();\npp.clickOnKebabMenu();\npp.clickOnKebabMenuHide();\npp.clickOnHideWindowHideButton();\npp.verifyAddNewPlanHideSuccessfullyText();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.\n    at Plan.clickOnKebabMenu (webpack://cypress/./cypress/pages/PlanPage.js:94:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:1424:11)",
+                "diff": null
+              },
+              "uuid": "c1120500-028a-4d77-8c76-e3ecaac2b7de",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanEditWindow",
+              "fullTitle": "Plans verifyAddNewPlanEditWindow",
+              "timedOut": null,
+              "duration": 7303,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanEditWindow (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnKebabMenu();\npp.clickOnKebabMenuEdit();\nvar footNote = pp.randomStringUpperCaseGenerator(5);\nvar twodigitvalue = pp.randomNumberGenerator(2);\npp.setAddNewPlanFootNote(footNote);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Basic');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Add-On');\npp.setAddNewPlanSelectTierOccurrence('One Time');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twodigitvalue + '.' + twodigitvalue);\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twodigitvalue);\npp.clickEditWindowSaveButton();\npp.verifyAddNewPlanEditedSuccessfully();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.\n    at Plan.clickOnKebabMenu (webpack://cypress/./cypress/pages/PlanPage.js:94:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:1435:11)",
+                "diff": null
+              },
+              "uuid": "31deebcc-abf0-461f-8f16-50a7a6d73f3c",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verifyAddNewPlanDuplicateWindow",
+              "fullTitle": "Plans verifyAddNewPlanDuplicateWindow",
+              "timedOut": null,
+              "duration": 7322,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\PlanTest.spec.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\PlanTest.spec.js\\\\Plans -- verifyAddNewPlanDuplicateWindow (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "pp.clickOnKebabMenu();\npp.clickOnKebabMenuDuplicate();\nvar planName = pp.randomStringUpperCaseGenerator(5);\nvar footNote = pp.randomStringUpperCaseGenerator(5);\nvar twodigitvalue = pp.randomNumberGenerator(2);\nvar singledigitvalue = pp.randomNumberGenerator(1);\npp.setAddNewPlanName(planName + ' ' + planName);\npp.setAddNewPlanFootNote(footNote);\npp.setAddNewPlanSelectGracePeriod('No Grace Period');\npp.setAddNewPlanSelectDashboard('Standard');\npp.setAddNewPlanSelectProduct('Landline Texting');\npp.setAddNewPlanSelectPlanType('Plan');\npp.setAddNewPlanSelectCountry('United States');\npp.setAddNewPlanMonthlyPrice(twodigitvalue + '.' + twodigitvalue);\npp.setAddNewPlanAnnualPrice(twodigitvalue + '.' + twodigitvalue);\npp.setAddNewPlanSelectFeature('Credits per month');\npp.setAddNewPlanValue(twodigitvalue);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Group Texting');\npp.setAddNewPlanValue(twodigitvalue);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('End User Creation');\npp.setAddNewPlanValue(singledigitvalue);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Main Feature');\npp.setAddNewPlanSelectFeature('Keywords');\npp.setAddNewPlanValue(singledigitvalue);\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Contacts');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MMS');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Emojis');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Dashboard');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Notifications');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Scheduled Messages');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('MS Teams Extension');\npp.clickOnAddNewPlanNewFeature();\npp.setAddNewPlanSelectFeatureType('Additional Feature');\npp.setAddNewPlanSelectFeature('Auto Replies');\npp.clickDuplicateWindowDuplicatePlanButton();\npp.verifyAddNewPlanDuplicatedSuccessfully();\npp.setAddNewPlanSearchBox(planName + ' ' + planName);\npp.verifyAddNewPlanRowGridCount();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//button[@aria-label='more']`, but never found it.\n    at Plan.clickOnKebabMenu (webpack://cypress/./cypress/pages/PlanPage.js:94:7)\n    at Context.eval (webpack://cypress/./cypress/e2e/PlanTest.spec.js:1454:11)",
+                "diff": null
+              },
+              "uuid": "6fff07b5-716b-4630-8fdd-93f5fe4094a4",
+              "parentUUID": "2e15e9fd-8fef-485f-a829-a479bc7779a9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0a703311-2a53-4e1e-8d55-d8db2570212e",
+            "3b8c7e15-4fce-4f26-aaa6-f24caf4fd269",
+            "a20aeee5-7d7c-41e8-9760-607ec2536646",
+            "652e0129-a12d-4e06-a011-078897c36181",
+            "d82157c8-0dae-40a1-bee8-d917411f028e",
+            "1029e274-89d3-4ee3-abc5-386f0fed74eb",
+            "19772189-9539-4e6b-a331-cdbec94178e6",
+            "150dd519-d3fd-4bf2-ad38-18c08d32b29b",
+            "94538a01-2166-4db0-9674-d27a402c91c6",
+            "4e3d14a1-b8f5-4fe7-a763-db624de5be80",
+            "6c406b4e-b593-49aa-9d9d-63745353b93a",
+            "a1cbe3cc-35aa-4193-9422-bff77b083664",
+            "21b9a1b3-e04b-4d69-a24b-4407eba1b6e3",
+            "2b071dcd-4849-4e00-8653-71a0aa12abf4",
+            "9a13a811-5363-4efe-8b4d-a4d02f7f9621",
+            "c1120500-028a-4d77-8c76-e3ecaac2b7de",
+            "31deebcc-abf0-461f-8f16-50a7a6d73f3c",
+            "6fff07b5-716b-4630-8fdd-93f5fe4094a4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 150911,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

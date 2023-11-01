@@ -1,0 +1,21 @@
+{ "data": [
+{
+"username": "qateaminfo@yopmail.com",
+"password": "Test@123"
+},
+{
+"username":"Sysadm.uat@gmail.com",
+"password": "Uat@@123"
+}
+],
+
+"username": "qateaminfo@yopmail.com",
+"password": "Test@123",
+"sysusername": "Sysadm.uat@gmail.com",
+"syspassword": "Uat@@123",
+"characterlimit31": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDE",
+"characterlimit21": "ABCDEFGHIJKLMNOPQRSTU",
+"digitlimit10": "1234567890",
+"invalidzipcode": "00000",
+"validzipcode": "77450"
+}

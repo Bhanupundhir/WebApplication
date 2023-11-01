@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-29T04:43:01.510Z",
+    "end": "2023-10-29T04:43:06.853Z",
+    "duration": 5343,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9db2798-b893-478c-9da6-cb4aa86fdc49",
+      "title": "",
+      "fullFile": "cypress\\e2e\\GroupTest.spec.js",
+      "file": "cypress\\e2e\\GroupTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "556a30d8-be22-496e-9f58-29801cf382fe",
+          "title": "Test2",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GroupTest",
+              "fullTitle": "Test2 GroupTest",
+              "timedOut": null,
+              "duration": 5256,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const grps = new _GroupsPage.default();\ngrps.clickGroupsMenu();\ngrps.verifyGroupsTitle();\ngrps.clickAddGroupButton();\ngrps.verifyAddGroupModalTitle();\ngrps.setBlankGroupName();\ngrps.clickSaveButton();\ngrps.verifyGroupNameCannotBeBlankMessage();\ngrps.verifySaveButtonIsDisabled();\ngrps.setRandomInvalidGroupName(grps.randonstr(34));\ngrps.verifyGroupNameShouldnotExceed30Chars();\ngrps.verifySaveButtonIsDisabled();\nvar ValidGroupName = grps.randonstr(10);\ngrps.setRandomValidGroupName(ValidGroupName);\ngrps.verifySaveButtonIsEnabled();\ngrps.clickSaveButton();\ngrps.setSearchGroup(ValidGroupName);\ngrps.verifyIfOnlyOneRowIsVisible();\ngrps.clickGrpsMeatballMenu();\ngrps.clickListGrpEdit();\nvar replacegrpname = grps.randonstr(10);\ngrps.replaceGrpNamewithNewname(replacegrpname);\ngrps.verifySaveButtonIsEnabled();\ngrps.clickSaveButton();\ngrps.setSearchGroup(replacegrpname);\ngrps.verifyIfOnlyOneRowIsVisible();\ngrps.clickGrpsMeatballMenu();\ngrps.clickListViewGroupInfo();\ngrps.verifyGroupInfoTitle();\ngrps.clickIconCloseGroupInfo();\ngrps.clickGrpsMeatballMenu();\ngrps.clickListGRPDuplicate();\ngrps.clickBtnDuplicate();\ngrps.searchDuplicateGroup(replacegrpname);\ngrps.verifyIfOnlyOneRowIsVisible();\ngrps.clickGrpsMeatballMenu();\ngrps.clickBtnDelete();\ngrps.clickBtnConfirmDelete();\ngrps.searchDuplicateGroup(replacegrpname);\ngrps.verifyTopRow();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//div[text()='Groups']`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//div[text()='Groups']`, but never found it.\n    at Groups.clickGroupsMenu (webpack://cypress/./cypress/pages/GroupsPage.js:52:11)\n    at Context.eval (webpack://cypress/./cypress/e2e/GroupTest.spec.js:10:9)",
+                "diff": null
+              },
+              "uuid": "d22a80c2-434c-4650-b4ed-88a71535a962",
+              "parentUUID": "556a30d8-be22-496e-9f58-29801cf382fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d22a80c2-434c-4650-b4ed-88a71535a962"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5256,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
